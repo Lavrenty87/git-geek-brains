@@ -2,24 +2,24 @@
 import java.util.Scanner;
 
 /**
- * Java. Level 1. Lesson 7
+ * Java. Level 1. Home Work 7
  *
- * @author Sergey Iryupin
- * @version dated Oct 01, 2018
+ * @author Gaponov Lavrenty
+ * @version dated Oct 05, 2018
  */
 class HomeWork_7 {
     public static void main(String[] args) {
      //  Cat cat = new Cat("Barsik", 10);
        // Cat cat1 = new Cat("Barsuk", 5);
         Cat[] catArry = {new Cat("Barsik", 10), new Cat("Vasa", 5),
-                new Cat("Vova", 6),new Cat("Gena", 7)};
+                new Cat("Vova", 6), new Cat("Gena", 7),
+                new Cat("Gora", 5), new Cat("Tima", 7)};
         Plate plate = new Plate(12);
         System.out.println(plate);
       for(int i = 0; i < catArry.length; i++) {
           catArry[i].eat(plate);
           System.out.println("Кот--" + catArry[i].getName() + "--сыт: " + catArry[i].getFull());
           System.out.println("\n-------------------------\n");
-          //System.out.println(catArry[i]);
           System.out.println(plate);
       }
     }
@@ -48,14 +48,6 @@ class Cat {
        this.full = plate.dicreaseFood(appetite);
     }
 
-   @Override
-    public String toString() {
-       return "Cat{" +
-               "name='" + name + '\'' +
-               ", appetite=" + appetite +
-               ", full=" + full +
-               '}';
-   }
 }
 class Plate {
     private int food;
